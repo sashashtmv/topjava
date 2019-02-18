@@ -24,7 +24,7 @@ public class MealTo {
                 "dateTime=" + dateTime +
                 ", description='" + description + '\'' +
                 ", calories=" + calories +
-                ", exceed=" + exceed +
+                ", exceed=" + excess +
                 '}';
     }
 }
