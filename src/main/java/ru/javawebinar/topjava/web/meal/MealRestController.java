@@ -40,10 +40,10 @@ public class MealRestController {
         service.delete(id, userId);
     }
 
-    public List<Meal> getAll() {
+    public List<MealTo> getAll() {
         int userId = SecurityUtil.authUserId();
         log.info("getAll for user {}", userId);
-        return service.getAll(userId);
+        return MealsUtil.getWithExcess(service.getAll(userId),SecurityUtil.authUserCaloriesPerDay());
     }
 
     public Meal create(Meal meal) {
